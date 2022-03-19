@@ -1,0 +1,1 @@
+To simulate an asm program, first compile it from one of the examples in the tests folder and then move the memfile to the current folder

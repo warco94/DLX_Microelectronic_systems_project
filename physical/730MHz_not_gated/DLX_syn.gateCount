@@ -1,0 +1,4 @@
+Gate area 0.7980 um^2
+Level 0 Module DLX_syn                                  Gates=     14997 Cells=    6610 Area=   11967.6 um^2
+Level 1 Module DataP/Reg_F                              Gates=5840       Cells=2558     Area=    4660.6 um^2
+Level 1 Module DataP/BR_pred                            Gates=1319       Cells=554      Area=    1053.1 um^2

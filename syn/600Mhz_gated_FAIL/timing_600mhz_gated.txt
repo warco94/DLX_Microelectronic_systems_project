@@ -1,0 +1,1362 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : DLX_syn
+Version: F-2011.09-SP3
+Date   : Fri Aug 21 01:16:30 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[29]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.86 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U6/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[1] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[1] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[29] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[29] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[29] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[29] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U37/ZN (AOI22_X1)                       0.05       1.50 r
+  DataP/ALU_C/mux/U38/ZN (NAND2_X1)                       0.03       1.53 f
+  DataP/ALU_C/mux/O[29] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[29] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[29] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U32/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U34/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[29] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[29] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U35/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[29]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[29]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[29]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.52 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.85 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U6/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[1] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[1] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[29] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[29] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[29] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[29] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U37/ZN (AOI22_X1)                       0.05       1.50 r
+  DataP/ALU_C/mux/U38/ZN (NAND2_X1)                       0.03       1.53 f
+  DataP/ALU_C/mux/O[29] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[29] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[29] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U32/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U34/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[29] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[29] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U35/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[29]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[29]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[30]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.86 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U7/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[2] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[2] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[30] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[30] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[30] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[30] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U132/ZN (AOI22_X1)                      0.05       1.50 r
+  DataP/ALU_C/mux/U134/ZN (NAND2_X1)                      0.03       1.53 f
+  DataP/ALU_C/mux/O[30] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[30] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[30] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U29/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U31/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[30] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[30] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U36/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[30]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[30]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[29]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.52 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.85 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U6/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[1] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[1] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[29] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[29] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[29] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[29] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U37/ZN (AOI22_X1)                       0.05       1.50 r
+  DataP/ALU_C/mux/U38/ZN (NAND2_X1)                       0.03       1.53 f
+  DataP/ALU_C/mux/O[29] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[29] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[29] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U32/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U34/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[29] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[29] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U35/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[29]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[29]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[29]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.06       0.06 f
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.05       0.11 r
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.11 r
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.11 r
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.11 r
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.04       0.16 r
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.02       0.18 f
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.04       0.23 r
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.03       0.25 f
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.29 f
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.29 f
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.05       0.35 f
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.38 r
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.03       0.40 f
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.40 f
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.40 f
+  DataP/FWD_MUX_B/U16/ZN (INV_X1)                         0.04       0.44 r
+  DataP/FWD_MUX_B/U27/ZN (NAND2_X1)                       0.04       0.47 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.05       0.52 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.85 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U6/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[1] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[1] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[29] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[29] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[29] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[29] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U37/ZN (AOI22_X1)                       0.05       1.50 r
+  DataP/ALU_C/mux/U38/ZN (NAND2_X1)                       0.03       1.53 f
+  DataP/ALU_C/mux/O[29] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[29] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[29] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U32/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U34/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[29] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[29] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U35/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[29]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[29]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[24]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U45/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U42/ZN (AND2_X1)          0.05       0.86 r
+  DataP/ALU_C/adder/sign/sub_20/U112/ZN (AND2_X1)         0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U69/Z (XOR2_X1)           0.03       0.93 f
+  DataP/ALU_C/adder/sign/sub_20/DIFF[22] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.93 f
+  DataP/ALU_C/adder/sign/U45/Z (MUX2_X2)                  0.07       1.01 f
+  DataP/ALU_C/adder/sign/O[22] (add_sub_N32)              0.00       1.01 f
+  DataP/ALU_C/adder/adder/B[22] (P4_ADDER_NBIT32)         0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/B[22] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/B (xor_gate_10)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/U1/Z (XOR2_X1)
+                                                          0.07       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/O (xor_gate_10)
+                                                          0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/PB (PG_17)      0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/U3/ZN (AND2_X1)
+                                                          0.04       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/P (PG_17)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/PA (PG_8)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U2/ZN (NAND2_X1)
+                                                          0.03       1.14 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U3/ZN (NAND2_X1)
+                                                          0.03       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/G (PG_8)        0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GA (PG_4)       0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.22 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/U4/Z (BUF_X1)             0.04       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/IG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/OG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/GA (G_3)        0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.34 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U2/ZN (INV_X1)
+                                                          0.04       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/G (G_3)         0.00       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Co[5] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/Cin[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/Ci (carry_select_block_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/SEL (MUX21_GENERIC_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/U3/Z (MUX2_X1)
+                                                          0.07       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/Y[0] (MUX21_GENERIC_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/S[0] (carry_select_block_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[24] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[24] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[24] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[24] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U121/ZN (AOI22_X1)                      0.05       1.50 r
+  DataP/ALU_C/mux/U123/ZN (NAND2_X1)                      0.03       1.53 f
+  DataP/ALU_C/mux/O[24] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[24] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[24] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U47/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U49/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[24] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[24] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U30/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[24]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[24]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[25]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U45/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U42/ZN (AND2_X1)          0.05       0.86 r
+  DataP/ALU_C/adder/sign/sub_20/U112/ZN (AND2_X1)         0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U69/Z (XOR2_X1)           0.03       0.93 f
+  DataP/ALU_C/adder/sign/sub_20/DIFF[22] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.93 f
+  DataP/ALU_C/adder/sign/U45/Z (MUX2_X2)                  0.07       1.01 f
+  DataP/ALU_C/adder/sign/O[22] (add_sub_N32)              0.00       1.01 f
+  DataP/ALU_C/adder/adder/B[22] (P4_ADDER_NBIT32)         0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/B[22] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/B (xor_gate_10)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/U1/Z (XOR2_X1)
+                                                          0.07       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/O (xor_gate_10)
+                                                          0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/PB (PG_17)      0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/U3/ZN (AND2_X1)
+                                                          0.04       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/P (PG_17)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/PA (PG_8)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U2/ZN (NAND2_X1)
+                                                          0.03       1.14 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U3/ZN (NAND2_X1)
+                                                          0.03       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/G (PG_8)        0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GA (PG_4)       0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.22 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/U4/Z (BUF_X1)             0.04       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/IG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/OG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/GA (G_3)        0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.34 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U2/ZN (INV_X1)
+                                                          0.04       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/G (G_3)         0.00       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Co[5] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/Cin[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/Ci (carry_select_block_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/SEL (MUX21_GENERIC_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/U4/Z (MUX2_X1)
+                                                          0.07       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/Y[1] (MUX21_GENERIC_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/S[1] (carry_select_block_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[25] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[25] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[25] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[25] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U124/ZN (AOI22_X1)                      0.05       1.50 r
+  DataP/ALU_C/mux/U126/ZN (NAND2_X1)                      0.03       1.53 f
+  DataP/ALU_C/mux/O[25] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[25] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[25] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U44/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U46/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[25] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[25] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U31/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[25]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[25]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[26]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U45/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U42/ZN (AND2_X1)          0.05       0.86 r
+  DataP/ALU_C/adder/sign/sub_20/U112/ZN (AND2_X1)         0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U69/Z (XOR2_X1)           0.03       0.93 f
+  DataP/ALU_C/adder/sign/sub_20/DIFF[22] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.93 f
+  DataP/ALU_C/adder/sign/U45/Z (MUX2_X2)                  0.07       1.01 f
+  DataP/ALU_C/adder/sign/O[22] (add_sub_N32)              0.00       1.01 f
+  DataP/ALU_C/adder/adder/B[22] (P4_ADDER_NBIT32)         0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/B[22] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/B (xor_gate_10)
+                                                          0.00       1.01 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/U1/Z (XOR2_X1)
+                                                          0.07       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_22/O (xor_gate_10)
+                                                          0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/PB (PG_17)      0.00       1.08 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/U3/ZN (AND2_X1)
+                                                          0.04       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_23/P (PG_17)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/PA (PG_8)       0.00       1.12 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U2/ZN (NAND2_X1)
+                                                          0.03       1.14 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/U3/ZN (NAND2_X1)
+                                                          0.03       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_23/G (PG_8)        0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GA (PG_4)       0.00       1.17 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.22 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 f
+  DataP/ALU_C/adder/adder/C_GEN/U4/Z (BUF_X1)             0.04       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/IG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Buf_h_4_23_0/OG (BUFF_1)
+                                                          0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/GA (G_3)        0.00       1.29 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U1/ZN (AOI21_X1)
+                                                          0.05       1.34 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/U2/ZN (INV_X1)
+                                                          0.04       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_23/G (G_3)         0.00       1.38 f
+  DataP/ALU_C/adder/adder/C_GEN/Co[5] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/Cin[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/Ci (carry_select_block_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/SEL (MUX21_GENERIC_N4_2)
+                                                          0.00       1.38 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/U2/Z (MUX2_X1)
+                                                          0.07       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/MUXSUM/Y[2] (MUX21_GENERIC_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_6/S[2] (carry_select_block_N4_2)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[26] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[26] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[26] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[26] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U127/ZN (AOI22_X1)                      0.05       1.50 r
+  DataP/ALU_C/mux/U129/ZN (NAND2_X1)                      0.03       1.53 f
+  DataP/ALU_C/mux/O[26] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[26] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[26] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U20/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U22/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[26] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[26] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U32/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[26]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[26]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[30]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.52 f
+  DataP/FWD_MUX_B/U36/ZN (AND2_X1)                        0.04       0.57 f
+  DataP/FWD_MUX_B/U33/ZN (OR3_X2)                         0.08       0.64 f
+  DataP/FWD_MUX_B/Y[14] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[14] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[14] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[14] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[14] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U58/ZN (INV_X1)           0.03       0.68 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.85 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U7/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[2] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[2] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[30] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[30] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[30] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[30] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U132/ZN (AOI22_X1)                      0.05       1.50 r
+  DataP/ALU_C/mux/U134/ZN (NAND2_X1)                      0.03       1.53 f
+  DataP/ALU_C/mux/O[30] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[30] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[30] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U29/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U31/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[30] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[30] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U36/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[30]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[30]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+  Startpoint: DataP/MEM_WB_s/OPCODE_OUT_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DataP/PC_reg/O_reg[29]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_syn            5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/CK (DFFR_X1)           0.00       0.00 r
+  DataP/MEM_WB_s/OPCODE_OUT_reg[1]/QN (DFFR_X1)           0.07       0.07 r
+  DataP/MEM_WB_s/U5/ZN (INV_X1)                           0.03       0.10 f
+  DataP/MEM_WB_s/OPCODE_OUT[1] (MEM_WB)                   0.00       0.10 f
+  DataP/FORWARDING/ICODE_W[1] (FWD_UNIT)                  0.00       0.10 f
+  DataP/FORWARDING/CAM/DATA_IN_3[1] (FWD_CAM_0)           0.00       0.10 f
+  DataP/FORWARDING/CAM/U15/ZN (OR2_X1)                    0.06       0.16 f
+  DataP/FORWARDING/CAM/U12/ZN (NAND2_X1)                  0.03       0.19 r
+  DataP/FORWARDING/CAM/U6/ZN (AOI22_X1)                   0.03       0.22 f
+  DataP/FORWARDING/CAM/U7/ZN (OAI21_X1)                   0.04       0.26 r
+  DataP/FORWARDING/CAM/U18/ZN (AND2_X1)                   0.04       0.30 r
+  DataP/FORWARDING/CAM/MATCH_3 (FWD_CAM_0)                0.00       0.30 r
+  DataP/FORWARDING/U26/ZN (OR2_X1)                        0.03       0.33 r
+  DataP/FORWARDING/U17/ZN (NAND3_X1)                      0.03       0.36 f
+  DataP/FORWARDING/U6/ZN (NOR2_X1)                        0.05       0.41 r
+  DataP/FORWARDING/SEL_B[1] (FWD_UNIT)                    0.00       0.41 r
+  DataP/FWD_MUX_B/SEL[1] (mux_3to1_N32_3)                 0.00       0.41 r
+  DataP/FWD_MUX_B/U14/ZN (NAND2_X1)                       0.05       0.46 f
+  DataP/FWD_MUX_B/U31/ZN (AND2_X2)                        0.06       0.53 f
+  DataP/FWD_MUX_B/U37/Z (CLKBUF_X1)                       0.04       0.57 f
+  DataP/FWD_MUX_B/U48/ZN (NAND2_X1)                       0.03       0.59 r
+  DataP/FWD_MUX_B/U47/ZN (NAND3_X1)                       0.04       0.64 f
+  DataP/FWD_MUX_B/Y[15] (mux_3to1_N32_3)                  0.00       0.64 f
+  DataP/ALU_C/INB[15] (ALU_N32)                           0.00       0.64 f
+  DataP/ALU_C/adder/B[15] (add_wrapper_N32)               0.00       0.64 f
+  DataP/ALU_C/adder/sign/A[15] (add_sub_N32)              0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/B[15] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.64 f
+  DataP/ALU_C/adder/sign/sub_20/U57/ZN (INV_X1)           0.04       0.67 r
+  DataP/ALU_C/adder/sign/sub_20/U52/ZN (NAND4_X1)         0.04       0.71 f
+  DataP/ALU_C/adder/sign/sub_20/U43/ZN (NOR2_X1)          0.04       0.76 r
+  DataP/ALU_C/adder/sign/sub_20/U44/ZN (AND2_X1)          0.05       0.81 r
+  DataP/ALU_C/adder/sign/sub_20/U36/ZN (AND2_X1)          0.05       0.85 r
+  DataP/ALU_C/adder/sign/sub_20/U80/ZN (AND2_X1)          0.04       0.90 r
+  DataP/ALU_C/adder/sign/sub_20/U79/ZN (XNOR2_X1)         0.05       0.95 r
+  DataP/ALU_C/adder/sign/sub_20/DIFF[18] (add_sub_N32_DW01_sub_2)
+                                                          0.00       0.95 r
+  DataP/ALU_C/adder/sign/U32/ZN (NAND2_X1)                0.03       0.98 f
+  DataP/ALU_C/adder/sign/U34/ZN (NAND2_X1)                0.04       1.02 r
+  DataP/ALU_C/adder/sign/O[18] (add_sub_N32)              0.00       1.02 r
+  DataP/ALU_C/adder/adder/B[18] (P4_ADDER_NBIT32)         0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/B[18] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/B (xor_gate_14)
+                                                          0.00       1.02 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/U1/Z (XOR2_X1)
+                                                          0.07       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/Xor_gsi_0_18/O (xor_gate_14)
+                                                          0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/PB (PG_19)      0.00       1.08 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/U3/ZN (AND2_X1)
+                                                          0.05       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_1_19/P (PG_19)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/PA (PG_9)       0.00       1.13 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U1/ZN (NAND2_X1)
+                                                          0.03       1.16 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/U4/ZN (NAND2_X1)
+                                                          0.03       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_2_19/G (PG_9)        0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/GB (PG_4)       0.00       1.19 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U1/ZN (AOI21_X1)
+                                                          0.03       1.22 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/U2/ZN (INV_X1)
+                                                          0.03       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_3_23/G (PG_4)        0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/GB (PG_2)     0.00       1.25 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U1/ZN (NAND2_X1)
+                                                          0.03       1.27 f
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/U2/ZN (NAND2_X1)
+                                                          0.03       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/PGsi_4_27_0/G (PG_2)      0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/GA (G_2)        0.00       1.30 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U3/ZN (INV_X1)
+                                                          0.02       1.32 f
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/U1/ZN (NAND2_X2)
+                                                          0.04       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Gs_h_5_27/G (G_2)         0.00       1.37 r
+  DataP/ALU_C/adder/adder/C_GEN/Co[6] (CARRY_GENERATOR_PARAMETRIC_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/Cin[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/Ci (carry_select_block_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/SEL (MUX21_GENERIC_N4_1)
+                                                          0.00       1.37 r
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/U6/Z (MUX2_X1)
+                                                          0.08       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/MUXSUM/Y[1] (MUX21_GENERIC_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/BLI_7/S[1] (carry_select_block_N4_1)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S_GEN/S[29] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.45 f
+  DataP/ALU_C/adder/adder/S[29] (P4_ADDER_NBIT32)         0.00       1.45 f
+  DataP/ALU_C/adder/O[29] (add_wrapper_N32)               0.00       1.45 f
+  DataP/ALU_C/mux/inadd[29] (mux4to1_N32)                 0.00       1.45 f
+  DataP/ALU_C/mux/U37/ZN (AOI22_X1)                       0.05       1.50 r
+  DataP/ALU_C/mux/U38/ZN (NAND2_X1)                       0.03       1.53 f
+  DataP/ALU_C/mux/O[29] (mux4to1_N32)                     0.00       1.53 f
+  DataP/ALU_C/alu_out[29] (ALU_N32)                       0.00       1.53 f
+  DataP/NPC_mux/A[29] (MUX21_GENERIC_N32_0)               0.00       1.53 f
+  DataP/NPC_mux/U32/ZN (NAND2_X1)                         0.03       1.56 r
+  DataP/NPC_mux/U34/ZN (NAND2_X1)                         0.02       1.59 f
+  DataP/NPC_mux/Y[29] (MUX21_GENERIC_N32_0)               0.00       1.59 f
+  DataP/PC_reg/D[29] (register_e_N32)                     0.00       1.59 f
+  DataP/PC_reg/U35/ZN (AND2_X1)                           0.03       1.62 f
+  DataP/PC_reg/O_reg[29]/D (DFF_X1)                       0.01       1.63 f
+  data arrival time                                                  1.63
+
+  clock CLK (rise edge)                                   1.67       1.67
+  clock network delay (ideal)                             0.00       1.67
+  DataP/PC_reg/O_reg[29]/CK (DFF_X1)                      0.00       1.67 r
+  library setup time                                     -0.04       1.63
+  data required time                                                 1.63
+  --------------------------------------------------------------------------
+  data required time                                                 1.63
+  data arrival time                                                 -1.63
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase signficant digits)                       0.00
+
+
+1
